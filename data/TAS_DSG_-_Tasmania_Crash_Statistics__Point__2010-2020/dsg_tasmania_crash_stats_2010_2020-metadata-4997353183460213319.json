@@ -1,0 +1,331 @@
+{
+    "organisation": "TAS_Govt_DSG",
+    "name": "dsg_tasmania_crash_stats_2010_2020",
+    "title": "TAS DSG - Tasmania Crash Statistics (Point) 2010-2020",
+    "legal": {
+        "copyrightYear": "2020",
+        "attributionYear": "2020",
+        "attribution": "{datasource.organisationTitle}, ({dataset.attributionYear}): {dataset.title}; accessed from SUDO on {dateOfAccess}.",
+        "clickthrough": false,
+        "licenceType": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "copyrightNotice": "&copy; {datasource.organisationTitle} {dataset.copyrightYear}"
+    },
+    "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+    "geoLevel": "NA",
+    "key": "id",
+    "keyRegex": null,
+    "availability": "true",
+    "geomField": "geom",
+    "keyword": "Transport,Traffic Accidents",
+    "theme": "transport",
+    "temporalExtent": {
+        "beginDate": "2010-01-01T00:00:00",
+        "endDate": "2020-12-07T00:00:00",
+        "selectTime": false
+    },
+    "type": "dataset",
+    "_id": "dataset-TAS_Govt_DSG-dsg_tasmania_crash_stats_2010_2020-NA",
+    "bbox": [
+        143.85,
+        -43.57,
+        148.35,
+        -39.66
+    ],
+    "abstract": "This dataset contains all vehicular crashes on Tasmanian roads reported by Tasmanian police, or in the case of property damage only, crashes reported by the public. The data covers the crashes over the period of 2010/01/01 to 2020/12/07.\n<br><br>\n\nThe original dataset was provided to SUDO by the <a href=https://www.stategrowth.tas.gov.au/ target='_blank'>Tasmanian Department of State Growth</a>. <br><br>\nSUDO has spatialised the data with PostGIS, from the geographic coordinates in the original dataset.",
+    "selectedAttributes": [
+        {
+            "name": "id",
+            "type": "Integer",
+            "title": "Crash Identifier",
+            "description": "Crash identifier.",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "centre_line",
+            "type": "String",
+            "title": "Centreline Marking",
+            "description": "Type of centreline marking (single continuous, single broken, double continuous, double broken, double - one broken one continuous, none, other, not known, not stated).",
+            "stype": "nominal",
+            "categories": [
+                {
+                    "key": "Double broken",
+                    "label": "Double broken"
+                },
+                {
+                    "key": "Double continuous",
+                    "label": "Double continuous"
+                },
+                {
+                    "key": "Double - one broken, one continuous",
+                    "label": "Double - one broken, one continuous"
+                },
+                {
+                    "key": "None",
+                    "label": "None"
+                },
+                {
+                    "key": "Not known",
+                    "label": "Not known"
+                },
+                {
+                    "key": "Not stated",
+                    "label": "Not stated"
+                },
+                {
+                    "key": "Other",
+                    "label": "Other"
+                },
+                {
+                    "key": "Single broken",
+                    "label": "Single broken"
+                },
+                {
+                    "key": "Single Continuous",
+                    "label": "Single Continuous"
+                }
+            ],
+            "filterValue": "Possible filter values",
+            "isDimension": false
+        },
+        {
+            "name": "crash_date",
+            "type": "Date",
+            "title": "Crash Date",
+            "description": "Date of the crash (YYYY-MM-DD).",
+            "isDimension": false
+        },
+        {
+            "name": "description",
+            "type": "String",
+            "title": "Crash Desciption",
+            "description": "Description of the crash and corresponding code number.",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "geom",
+            "type": "Geometry",
+            "title": "Geometry",
+            "description": "geom",
+            "isDimension": false
+        },
+        {
+            "name": "latitude",
+            "type": "Double",
+            "title": "Latitude",
+            "description": "Latitude (GDA1994).",
+            "isDimension": false
+        },
+        {
+            "name": "light_condition",
+            "type": "String",
+            "title": "Light Conditions",
+            "description": "Light conditions at crash location (daylight, dawn / dusk, darkness (with street light), darkness (without street light), not known, not stated).",
+            "stype": "nominal",
+            "categories": [
+                {
+                    "key": "Darkness (without street light)",
+                    "label": "Darkness (without street light)"
+                },
+                {
+                    "key": "Darkness (with street light)",
+                    "label": "Darkness (with street light)"
+                },
+                {
+                    "key": "Dawn / Dusk",
+                    "label": "Dawn / Dusk"
+                },
+                {
+                    "key": "Daylight",
+                    "label": "Daylight"
+                },
+                {
+                    "key": "Not known",
+                    "label": "Not known"
+                },
+                {
+                    "key": "Not stated",
+                    "label": "Not stated"
+                },
+                {
+                    "key": null,
+                    "label": null
+                }
+            ],
+            "filterValue": "Possible filter values",
+            "isDimension": false
+        },
+        {
+            "name": "location_description",
+            "type": "String",
+            "title": "Location Description",
+            "description": "Description of location including street names and other features.",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "longitude",
+            "type": "Double",
+            "title": "Longitude",
+            "description": "Longitude (GDA1994).",
+            "isDimension": false
+        },
+        {
+            "name": "report_date",
+            "type": "Date",
+            "title": "Report Date",
+            "description": "Date of the report (YYYY-MM-DD).",
+            "stype": "interval",
+            "isDimension": false
+        },
+        {
+            "name": "severity",
+            "type": "String",
+            "title": "Severity",
+            "description": "Severity of crash (eg. minor, serious).",
+            "stype": "nominal",
+            "categories": [
+                {
+                    "key": "Fatal",
+                    "label": "Fatal"
+                },
+                {
+                    "key": "First Aid",
+                    "label": "First Aid"
+                },
+                {
+                    "key": "Minor",
+                    "label": "Minor"
+                },
+                {
+                    "key": "Not known",
+                    "label": "Not known"
+                },
+                {
+                    "key": "Property Damage Only",
+                    "label": "Property Damage Only"
+                },
+                {
+                    "key": "Serious",
+                    "label": "Serious"
+                }
+            ],
+            "filterValue": "Possible filter values",
+            "isDimension": false
+        },
+        {
+            "name": "speed_zone",
+            "type": "String",
+            "title": "Speed Zone",
+            "description": "Speed zone at crash location (<40, 40, 40 school, 50, 60, 70, 80, 90, 100, 110, not known, not stated).",
+            "stype": "interval",
+            "categories": [
+                {
+                    "key": "040",
+                    "label": "040"
+                },
+                {
+                    "key": "040 school",
+                    "label": "040 school"
+                },
+                {
+                    "key": "050",
+                    "label": "050"
+                },
+                {
+                    "key": "060",
+                    "label": "060"
+                },
+                {
+                    "key": "070",
+                    "label": "070"
+                },
+                {
+                    "key": "080",
+                    "label": "080"
+                },
+                {
+                    "key": "090",
+                    "label": "090"
+                },
+                {
+                    "key": "100",
+                    "label": "100"
+                },
+                {
+                    "key": "110",
+                    "label": "110"
+                },
+                {
+                    "key": "<40",
+                    "label": "<40"
+                },
+                {
+                    "key": "Not known",
+                    "label": "Not known"
+                },
+                {
+                    "key": "Not stated",
+                    "label": "Not stated"
+                }
+            ],
+            "isDimension": false
+        },
+        {
+            "name": "surface_type",
+            "type": "String",
+            "title": "Surface Type",
+            "description": "Surface at crash location (sealed, unsealed, not known, not stated).",
+            "stype": "nominal",
+            "categories": [
+                {
+                    "key": "Not known",
+                    "label": "Not known"
+                },
+                {
+                    "key": "Not stated",
+                    "label": "Not stated"
+                },
+                {
+                    "key": "Sealed",
+                    "label": "Sealed"
+                },
+                {
+                    "key": "Unsealed",
+                    "label": "Unsealed"
+                }
+            ],
+            "filterValue": "Possible filter values",
+            "isDimension": false
+        },
+        {
+            "name": "vcrn",
+            "type": "String",
+            "title": "Vehicle Crash Report Number",
+            "description": "Vehicle crash report number.",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "visited",
+            "type": "String",
+            "title": "Visited",
+            "description": "Crash site visited (yes, no).",
+            "stype": "nominal",
+            "isDimension": false
+        }
+    ],
+    "filter": {
+        "filterType": "tabular",
+        "spatial": {
+            "bbox": [
+                96.816765696,
+                -43.740509603,
+                159.109219008,
+                -9.142175977
+            ]
+        },
+        "states": []
+    }
+}
